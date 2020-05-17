@@ -10,16 +10,54 @@
 
     <body>
         <header>
-            <h1>What's It Worth?</h1>
-            <h2>Currency Exchange Rates</h2>
+            <h1>Currency Exchange Rates</h1>
         </header>
 
         <div class="Container">
             <div class="Graph">
                 <div class="Graph-header">
-                    <h2>Base Currency: EUR</h2>
+                    <span><h2>Base Currency: EUR</h2></span>
+                    <span><h2>Country:</h2><select>
+                        <option>AUD</option>
+                        <option>BGN</option>
+                        <option>BRL</option>
+                        <option>CAD</option>
+                        <option>CHF</option>
+                        <option>CNY</option>
+                        <option>CZK</option>
+                        <option>DKK</option>
+                        <option>GBP</option>
+                        <option>HKD</option>
+                        <option>HRK</option>
+                        <option>HUF</option>
+                        <option>IDR</option>
+                        <option>ILS</option>
+                        <option>INR</option>
+                        <option>ISK</option>
+                        <option>JPY</option>
+                        <option>KRW</option>
+                        <option>MXN</option>
+                        <option>MYR</option>
+                        <option>NOK</option>
+                        <option>NZD</option>
+                        <option>PHP</option>
+                        <option>PLN</option>
+                        <option>RON</option>
+                        <option>RUB</option>
+                        <option>SEK</option>
+                        <option>SGD</option>
+                        <option>THB</option>
+                        <option>TRY</option>
+                        <option>USD</option>
+                        <option>ZAR</option>
+                    </select></span>
+                    <span><h2>Year:</h2><select>
+                        <option>2010</option>
+                        <option>2015</option>
+                        <option>2020</option>
+                    </select></span>
                 </div>
-                <div class="Graph-content">
+                <div class="Graph-content" id="bar-chart">
                     <div class="Graph-bar" style="width: 95%" onClick="
                     alert('1 EUR = 0.8753 GBP')
                 ">GBP &pound;</div>
@@ -39,5 +77,7 @@
                 </div>
             </div>
         </div>
+
+        <script src="js/main.js"></script>
     </body>
 </html>
