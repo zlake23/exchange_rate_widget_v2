@@ -1,0 +1,100 @@
+:root {
+    --bg-color: #527318;
+    --bar-height: 70px;
+    --border-color: #feb72b;
+    --header-text: #e7c710;
+    --graph-bg: #899857;
+    --border-radius: 10px;
+}
+
+
+body {
+    background: var(--bg-color);
+}
+
+header {
+    color: var(--header-text);
+    text-align: center;
+}
+
+.Container {
+    height: 700px;
+    border: 5px solid var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+.Graph {
+    display: grid;
+    background: var(--graph-bg);
+    grid-template-columns: 1fr 800px 1fr;
+    grid-template-rows: 50px 600px 50px;
+}
+
+.Graph-header {
+    grid-row: 1;
+    grid-column: 1 / span 3;
+    text-align: center;
+    color: var(--header-text);
+}
+
+.Graph-content {
+    grid-row: 2;
+    grid-column: 2;
+    border: 3px solid var(--border-color);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.Graph-bar {
+    background: var(--header-text);
+    height: var(--bar-height);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.Graph-bar:hover {
+    background: var(--bg-color);
+    transition: 1.3s;
+    box-shadow: 5px 5px 3px black;
+    padding: 10px;
+    font-size: 36px;
+    border: 3px solid var(--border-color);
+    color: var(--border-color);
+}
+
+@media screen and (max-width: 950px) {
+    .Graph {
+        grid-template-columns: 1fr 600px 1fr;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .Graph {
+        grid-template-columns: 1fr 500px 1fr;
+    }
+    .Graph-bar:hover {
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .Graph {
+        grid-template-columns: 1fr 400px 1fr;
+    }
+    .Graph-bar:hover {
+        padding: 3px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Graph {
+        grid-template-columns: 1fr 300px 1fr;
+    }
+    .Graph-bar:hover {
+        padding: 2px;
+    }
+}
