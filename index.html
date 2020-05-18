@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>
-            What's It Worth?
+            Exchange Rates
         </title>
         <link href="./css/site.css" rel="stylesheet">
     </head>
@@ -14,66 +14,143 @@
         </header>
 
         <div class="Container">
-            <div class="Graph">
-                <div class="Graph-header">
-                    <span><h2>Base Currency: EUR</h2></span>
-                    <span><h2>Country:</h2><select>
-                        <option>AUD</option>
-                        <option>BGN</option>
-                        <option>BRL</option>
-                        <option>CAD</option>
-                        <option>CHF</option>
-                        <option>CNY</option>
-                        <option>CZK</option>
-                        <option>DKK</option>
-                        <option>GBP</option>
-                        <option>HKD</option>
-                        <option>HRK</option>
-                        <option>HUF</option>
-                        <option>IDR</option>
-                        <option>ILS</option>
-                        <option>INR</option>
-                        <option>ISK</option>
-                        <option>JPY</option>
-                        <option>KRW</option>
-                        <option>MXN</option>
-                        <option>MYR</option>
-                        <option>NOK</option>
-                        <option>NZD</option>
-                        <option>PHP</option>
-                        <option>PLN</option>
-                        <option>RON</option>
-                        <option>RUB</option>
-                        <option>SEK</option>
-                        <option>SGD</option>
-                        <option>THB</option>
-                        <option>TRY</option>
-                        <option>USD</option>
-                        <option>ZAR</option>
-                    </select></span>
-                    <span><h2>Year:</h2><select>
-                        <option>2010</option>
-                        <option>2015</option>
-                        <option>2020</option>
-                    </select></span>
+            <div class="Graph-header">
+                <div><h2>Base Currency: EUR</h2></div>
+                <div class="checkbox" id="country-button">
+                    <label>
+                        <input type="checkbox">
+                        <span>AUD</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>BGN</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>BRL</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>CAD</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>CHF</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>CNY</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>CZK</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>DKK</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>GBP</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>HKD</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>HRK</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>HUF</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>IDR</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>ILS</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>INR</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>ISK</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>JPY</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>KRW</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>MXN</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>MYR</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>NOK</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>NZD</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>PHP</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>PLN</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>RON</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>RUB</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>SEK</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>SGD</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>THB</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>TRY</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>USD</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <span>ZAR</span>
+                    </label>
                 </div>
-                <div class="Graph-content" id="bar-chart">
-                    <div class="Graph-bar" style="width: 95%" onClick="
-                    alert('1 EUR = 0.8753 GBP')
-                ">GBP &pound;</div>
-                    <div class="Graph-bar" style="width: 85.5%" onClick="
-                    alert('1 EUR = 1 EUR')
-                ">EUR &euro;</div>
-                    <div class="Graph-bar" style="width: 75%" onClick="
-                    alert('1 EUR = 1.0843 USD')
-                ">USD &dollar;</div>
-                    <div class="Graph-bar" style="width: 56%" onClick="
-                    alert('1 EUR = 1.5118 CAD')
-                ">CAD &dollar;</div>
 
-                    <div class="Graph-bar" style="width: 50%" onClick="
-                    alert('1 EUR = 1.6613 AUD')
-                ">AUD &dollar;</div>
+            <div class="Graph">
+                
+                <div class="Graph-content" id="bar-chart">
+                    
                 </div>
             </div>
         </div>
