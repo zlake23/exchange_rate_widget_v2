@@ -1,6 +1,6 @@
 :root {
     --bg-color: #527318;
-    --bar-height: 70px;
+    --bar-height: 40px;
     --border-color: #feb72b;
     --header-text: #e7c710;
     --graph-bg: #899857;
@@ -25,22 +25,15 @@ header {
 .Graph {
     display: grid;
     background: var(--graph-bg);
-    grid-template-columns: 1fr 100vh 1fr;
-    grid-template-rows: 50px 800px 50px;
+    grid-template-columns: 1fr 700px 1fr;
+    grid-template-rows: 50px 600px 50px;
 }
 
-.Graph-header {
-    grid-row: 1;
-    grid-column: 1 / span 3;
-    text-align: center;
-    color: var(--header-text);
-}
 
 .Graph-content {
     grid-row: 2;
     grid-column: 1 / span 3;
     border: 3px solid var(--border-color);
-    border-radius: var(--border-radius);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -49,18 +42,21 @@ header {
 .Graph-bar {
     background: var(--header-text);
     height: var(--bar-height);
+    color: black;
     display: grid;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 18px;
+    max-width: 98%;
+    min-width: 10%;
 }
 
 .Graph-bar:hover {
     background: var(--bg-color);
     transition: 1.3s;
     box-shadow: 5px 5px 3px black;
-    padding: 10px;
-    font-size: 36px;
+    padding: 3px;
+    font-size: 20px;
     border: 3px solid var(--border-color);
     color: var(--border-color);
 }
@@ -76,7 +72,7 @@ header {
         grid-template-columns: 1fr 500px 1fr;
     }
     .Graph-bar:hover {
-        padding: 5px;
+        padding: 2px;
     }
 }
 
@@ -84,16 +80,21 @@ header {
     .Graph {
         grid-template-columns: 1fr 400px 1fr;
     }
-    .Graph-bar:hover {
-        padding: 3px;
+    .Graph-bar {
+        font-size: 10px;
     }
+    .Graph-bar:hover {
+        padding: 1px;
 }
 
 @media screen and (max-width: 600px) {
     .Graph {
         grid-template-columns: 1fr 300px 1fr;
     }
+    .Graph-bar {
+        font-size: 10px;
+    }
     .Graph-bar:hover {
-        padding: 2px;
+        padding: 1px;
     }
 }
