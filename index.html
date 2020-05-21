@@ -11,146 +11,27 @@
     <body>
         <header>
             <h1>Currency Exchange Rates</h1>
+            <h2>Base Currency: 1 EURO</h2>
         </header>
 
         <div class="Container">
-            <div class="Graph-header">
-                <div><h2>Base Currency: EUR</h2></div>
-                <div class="checkbox" id="country-button">
-                    <label>
-                        <input type="checkbox">
-                        <span>AUD</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>BGN</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>BRL</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>CAD</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>CHF</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>CNY</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>CZK</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>DKK</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>GBP</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>HKD</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>HRK</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>HUF</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>IDR</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>ILS</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>INR</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>ISK</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>JPY</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>KRW</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>MXN</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>MYR</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>NOK</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>NZD</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>PHP</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>PLN</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>RON</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>RUB</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>SEK</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>SGD</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>THB</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>TRY</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>USD</span>
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        <span>ZAR</span>
-                    </label>
-                </div>
-
             <div class="Graph">
-                
+                <div class="Graph-select">
+                    <select onchange="changeRegion()" id="exchange-rate-region">
+                        <option>Europe</option>
+                        <!-- BGN, CZK, DKK, GBP, HUF, PLN, RON, SEK, CHF, ISK, NOK, HRK, RUB -->
+                        <option>Asia</option>
+                        <!-- CNY, HKD, IDR, ILS, INR, KRW, MYR, PHP, SGD, THB, TRY-->
+                        <option>North America</option>
+                        <!-- USD, CAD, MXN -->
+                        <option>South America</option>
+                        <!-- BRL -->
+                        <option>Africa/Oceania</option>
+                        <!-- ZAR, AUD, NZD-->
+                    </select>
+                </div>
                 <div class="Graph-content" id="bar-chart">
-                    
+
                 </div>
             </div>
         </div>
