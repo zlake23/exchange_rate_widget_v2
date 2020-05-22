@@ -6,8 +6,7 @@
         </title>
         <link href="./css/site.css" rel="stylesheet">
     </head>
-
-
+    
     <body>
         <header>
             <h1>Currency Exchange Rates</h1>
@@ -19,20 +18,14 @@
                 <div class="Graph-select">
                     <select onchange="changeRegion()" id="exchange-rate-region">
                         <option>Europe</option>
-                        <!-- BGN, CZK, DKK, GBP, HUF, PLN, RON, SEK, CHF, ISK, NOK, HRK, RUB -->
                         <option>Asia</option>
-                        <!-- CNY, HKD, IDR, ILS, INR, KRW, MYR, PHP, SGD, THB, TRY-->
                         <option>North America</option>
-                        <!-- USD, CAD, MXN -->
                         <option>South America</option>
-                        <!-- BRL -->
                         <option>Africa/Oceania</option>
-                        <!-- ZAR, AUD, NZD-->
                     </select>
                 </div>
-                <div class="Graph-content" id="bar-chart">
-
-                </div>
+                <div class="Graph-text" id="country-rate"></div>
+                <div class="Graph-content" id="bar-chart"></div>
             </div>
         </div>
 
