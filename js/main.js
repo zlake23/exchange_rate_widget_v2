@@ -1,19 +1,18 @@
-console.log('Ready to code');
-
 let apiData = []
 let selectedRegionTitle = 'Europe';
 
 function changeRegion() {
-    console.log(event.target.value);
     selectedRegionTitle = (event.target.value);
     render();
 }
-// Display currency data in bar chart //
+
+// Render currency data from apiData //
 function render() {
-    console.log('render function invoked');
     let barChart = document.querySelector('#bar-chart');
     barChart.innerHTML = '';
-        
+    let countryRate = document.querySelector('#country-rate');
+    countryRate.innerHTML = '';
+
     let selectedRegion = {
         'Europe': ['BGN', 'CZK', 'DKK', 'GBP', 'HUF', 'PLN', 'RON', 'SEK', 'CHF', 'ISK', 'NOK', 'HRK', 'RUB'],
         'Asia': ['CNY', 'HKD', 'IDR', 'ILS', 'INR', 'KRW', 'MYR', 'PHP', 'SGD', 'THB', 'TRY'],
@@ -22,14 +21,15 @@ function render() {
         'Africa/Oceania': ['ZAR', 'AUD', 'NZD'],
     }
 
-
+// Loop through and display countries if found in selectedRegion
     for (country of apiData) {
         if (selectedRegion[selectedRegionTitle].includes(country[0])) {
-            console.log(country[0]);
-            console.log(selectedRegion[selectedRegionTitle].length);
             let width = 1/country[1] * 100;
             let bar = document.createElement("div");
-            bar.textContent = country[0];
+            let text = document.createElement("div");
+            text.textContent = country[0] + ', ' + country[1];
+            text.classList.add("Graph-text");
+            countryRate.append(text);
             bar.classList.add("Graph-bar");
             bar.style.width = width + "%";
             barChart.appendChild(bar);
@@ -43,6 +43,7 @@ function doFetch() {
         .then(response => response.json())
         .then(data => {
             apiData = Object.entries(data.rates);
+            apiData.sort();
             console.log(apiData);
             render();
         });
